@@ -30,7 +30,7 @@ void main() {
   element.rootAncestorStateOfType(TypeMatcher<targetType>());
   element.ancestorRenderObjectOfType(TypeMatcher<targetType>());
 
-  // Changes made in https://github.com/flutter/flutter/pull/45941
+  // Changes made in https://github.com/flutter/flutter/pull/45941 and https://github.com/flutter/flutter/pull/83843
   final WidgetsBinding binding = WidgetsBinding.instance!;
   binding.deferFirstFrameReport();
   binding.allowFirstFrameReport();
@@ -518,7 +518,4 @@ void main() {
   colorScheme = colorScheme.copyWith(primaryVariant: Colors.black, secondaryVariant: Colors.white);
   colorScheme.primaryVariant;
   colorScheme.secondaryVariant;
-
-  // Changes made in https://github.com/flutter/flutter/pull/96115
-  Icon icon = Icons.pie_chart_outlined;
 }

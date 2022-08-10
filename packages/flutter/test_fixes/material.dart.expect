@@ -31,8 +31,8 @@ void main() {
   element.findRootAncestorStateOfType<targetType>();
   element.findAncestorRenderObjectOfType<targetType>();
 
-  // Changes made in https://github.com/flutter/flutter/pull/45941
-  final WidgetsBinding binding = WidgetsBinding.instance!;
+  // Changes made in https://github.com/flutter/flutter/pull/45941 and https://github.com/flutter/flutter/pull/83843
+  final WidgetsBinding binding = WidgetsBinding.instance;
   binding.deferFirstFrame();
   binding.allowFirstFrame();
 
@@ -491,7 +491,4 @@ void main() {
   colorScheme = colorScheme.copyWith();
   colorScheme.primaryContainer;
   colorScheme.secondaryContainer;
-
-  // Changes made in https://github.com/flutter/flutter/pull/96115
-  Icon icon = Icons.pie_chart_outline;
 }
